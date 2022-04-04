@@ -35,48 +35,66 @@ class HomePage extends StatelessWidget {
                            padding: const EdgeInsets.all(8.0),
                            child: Row(
                              children: [
-                               CircleAvatar(
-                                 radius: 25,
-                                 backgroundImage: AssetImage("asstes/als.jpg")
-                               ),
-                               SizedBox(width: 20,),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  height: height*0.10,
+                                  width: width*0.05,
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.deepOrange.withOpacity(0.5),
+                                        blurRadius: 1,
+                                        spreadRadius: -12,
+                                        offset: Offset(-8, 3), // changes position of shadow
+                                      ),
+                                    ],
+                                    borderRadius: BorderRadius.circular(40),
+                                    image: DecorationImage(
+                                      image:  AssetImage("asstes/als.png"),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                               SizedBox(width: width*0.04,),
                                InkWell(
                                  onTap: (){},
                                  child: Padding(
                                    padding: const EdgeInsets.all(8.0),
                                    child: Text('Home'
-                                     ,style: GoogleFonts.lato(fontSize: height*0.03),),
+                                     ,style: GoogleFonts.lato(fontSize: height*0.03,fontWeight: FontWeight.bold),),
                                   ),
                                  ),
-                               SizedBox(width: 20,),
+                               SizedBox(width: width*0.04,),
                                InkWell(
                                  onTap: (){},
                                  child: Padding(
                                    padding: const EdgeInsets.all(8.0),
                                    child: Text('About us'
-                                       ,style: GoogleFonts.lato(fontSize: height*0.03),),
+                                       ,style: GoogleFonts.lato(fontSize: height*0.03,fontWeight: FontWeight.bold),),
 
                                    ),
                                  ),
 
-                               SizedBox(width: 20,),
+                               SizedBox(width: width*0.04,),
                                InkWell(
                                  onTap: (){},
                                  child: Padding(
                                    padding: const EdgeInsets.all(8.0),
                                    child: Text('Our App',
-                                     style: GoogleFonts.lato(fontSize: height*0.03),),
+                                     style: GoogleFonts.lato(fontSize: height*0.03,fontWeight: FontWeight.bold),),
 
                                    ),
                                  ),
 
-                               SizedBox(width: 20,),
+                               SizedBox(width: width*0.04,),
                                InkWell(
                                  onTap: (){},
                                  child: Padding(
                                    padding: const EdgeInsets.all(8.0),
                                    child: Text('Contacts',
-                                       style: GoogleFonts.lato(fontSize: height*0.03),),
+                                       style: GoogleFonts.lato(fontSize: height*0.03,fontWeight: FontWeight.bold),),
 
                                    ),
                                  ),
@@ -90,7 +108,7 @@ class HomePage extends StatelessWidget {
                              height: height*0.9,
                              width: width,
                              decoration: BoxDecoration(
-                               borderRadius: BorderRadius.circular(10),
+                               borderRadius: BorderRadius.circular(40),
                                image: DecorationImage(
                                  image: AssetImage("asstes/backup.jpg"),
                                  fit: BoxFit.cover,
@@ -126,10 +144,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
       )
-
-
-
-
     );
   }
 }
