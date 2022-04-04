@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
                            child: Row(
                              children: [
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.only(top: height*0.025,left: width*0.04),
                                 child: Container(
                                   height: height*0.10,
                                   width: width*0.05,
@@ -115,25 +115,27 @@ class HomePage extends StatelessWidget {
                                ),
                              ),
                              alignment: Alignment.center,
-                             child:  Center(
-                               child:  // alignment is for centering the frostedglass, we don't use Center();
+                             child:  // alignment is for centering the frostedglass, we don't use Center();
                                //  because if you want to change its position and remove the Center();
                                //  widget, everything will get messy the script crashes.
-                               FrostedGlassBox(
-                                 // theWidth is the width of the frostedglass
-                                 theWidth: 200.0,
-                                 // theHeight is the height of the frostedglass
-                                 theHeight: 200.0,
-                                 // theChild is the child of the frostedglass
-                                 theChild: Text(
-                                   'Hello world',
-                                   style: TextStyle(color: Colors.white54, fontSize: 30.0),
+                               Padding(
+                                 padding:EdgeInsets.only(top: height*0.1,left: 1),
+                                 child: FrostedGlassBox(
+                                   // theWidth is the width of the frostedglass
+                                   theWidth: 200.0,
+                                   // theHeight is the height of the frostedglass
+                                   theHeight: height*0.7,
+                                   // theChild is the child of the frostedglass
+                                   theChild: Text(
+                                     'Hello world',
+                                     style: TextStyle(color: Colors.white54, fontSize: 30.0),
+                                   ),
                                  ),
                                ),
                              ),
 
                            ),
-                         ),
+
                        ],
                      ),
                    ),
