@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     final double height=MediaQuery.of(context).size.height;
     final  double width=MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor:Colors.black54,
+      backgroundColor:Color(0xffaeb6bf),
       body:SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.deepOrange.withOpacity(0.5),
+                                        color: Color(0xffff5722),
                                         blurRadius: 1,
                                         spreadRadius: -12,
                                         offset: Offset(-8, 3), // changes position of shadow
